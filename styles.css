@@ -1,47 +1,74 @@
 body {
     background-color: #0a0a23;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
 }
 
+#game {
+    width: 500px;
+    background-color: #ffffff;
+    color: #ffffff;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 6px; /* чуть-чуть отступов между блоками */
+}
+
+/* Текстовое поле с фиксированной высотой, чтобы не прыгало */
 #text {
     background-color: #0a0a23;
     color: #ffffff;
     padding: 10px;
+    min-height: 90px;
+    box-sizing: border-box;
+    line-height: 1.4;
 }
 
-#game {
-    max-width: 500px;
-    max-height: 400px;
-    background-color: #ffffff;
-    color: #ffffff;
-    margin-top: 30px;
-    margin-bottom: 0px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 10px;
-}
-
-#controls, #stats {
+/* Панель управления и статистики */
+#controls,
+#stats,
+#monsterStats {
     border: 1px solid #0a0a23;
-    color: #0a0a23;
     padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#controls {
+    background-color: #eeeeee;
+}
+
+#stats {
+    color: #0a0a23;
+    background-color: #f9f9f9;
 }
 
 #monsterStats {
     display: none;
-    border: 1px solid #0a0a23;
     color: #ffffff;
     background-color: #c70d0d;
-    padding: 5px;
 }
 
+/* Элементы статов */
 .stat {
     padding-right: 10px;
 }
 
+/* Кнопки */
 button {
     cursor: pointer;
     color: #0a0a23;
     background-color: #feac32;
     background-image: linear-gradient(#fecc4c, #ffac33);
     border: 3px solid #feac32;
+    padding: 5px 10px;
+    margin: 2px;
+    flex-grow: 1;
+    min-width: 30%;
 }
